@@ -8,7 +8,7 @@ import { Perf } from 'r3f-perf'
 export default function Experience()
 {
 
-    const model = useLoader(GLTFLoader, './beaker.glb')
+    const model = useLoader(GLTFLoader, './bea.glb')
 
     return <>
 
