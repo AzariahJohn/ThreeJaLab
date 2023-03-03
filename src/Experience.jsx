@@ -8,9 +8,6 @@ import * as THREE from 'three'
 
 export default function Experience()
 {
-
-    const model = useLoader(GLTFLoader, './virus.glb')
-
     return <>
         <Perf position="top-left" />
 
@@ -28,6 +25,5 @@ export default function Experience()
             <boxGeometry />
             <meshNormalMaterial />
         </mesh>
-
     </>
 }
