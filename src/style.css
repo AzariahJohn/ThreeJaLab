@@ -10,4 +10,9 @@
     margin: 0;
     padding: 0;
   }
-  
+  .canvas{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6) ), url("https://img.freepik.com/free-vector/futuristic-science-lab-background_23-2148505015.jpg?w=1380&t=st=1677943447~exp=1677944047~hmac=2ca2767afbf7734fb134e46a7abf4ec1bf3ec4d3dfb6f0ed9d56930fe622ee39");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

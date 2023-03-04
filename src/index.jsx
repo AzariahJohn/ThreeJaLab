@@ -17,8 +17,9 @@ root.render(
                 fov: 45,
                 near: 0.1,
                 far: 200,
-                position: [ 10, 10, 10 ]
+                position: [ 0, 1.6, 10 ],
             } }
+            className="canvas"
         >
             {/* <directionalLight position={ [ 0, 2, 0 ] } intensity={ 1 } />
             <ambientLight intensity={ 0.05 } />
