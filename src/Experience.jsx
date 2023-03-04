@@ -6,7 +6,7 @@ import { useRef, useState, useEffect } from 'react'
 import { Perf } from 'r3f-perf'
 import * as THREE from 'three'
 import Physics from './components/Physics/Phisycs'
-import Chemistry from './components/Chemistry/chemistry'
+import Chemistry from './components/Chemistry/Chemistry'
 import Biology from './components/Biology/Biology'
 
 const IntroPage = (props) => {
