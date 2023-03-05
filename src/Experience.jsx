@@ -28,7 +28,7 @@ const IntroPage = (props) => {
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>
                 <boxGeometry />
-                <meshStandardMaterial color="#4E6E81" />
+                <meshStandardMaterial color="#BDCDD6" />
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Physics</Text>
         </group>
@@ -44,7 +44,7 @@ const IntroPage = (props) => {
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>
                 <boxGeometry />
-                <meshStandardMaterial color="#4E6E81" />
+                <meshStandardMaterial color="#BDCDD6" />
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Chemistry</Text>
         </group>
@@ -60,7 +60,7 @@ const IntroPage = (props) => {
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>
                 <boxGeometry />
-                <meshStandardMaterial color="#4E6E81" />
+                <meshStandardMaterial color="#BDCDD6" />
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Biology</Text>
         </group>
@@ -80,8 +80,8 @@ export default function Experience()
         {/* <Perf position="top-left" /> */}
         <OrbitControls makeDefault />
 
-        <directionalLight position={ [ 0, 10, 10 ] } intensity={ 10 } />
-        <ambientLight intensity={ 2 } />
+        <directionalLight position={ [ 0, 40, 10 ] } intensity={ 1 } />
+        <ambientLight intensity={ 1 } />
 
         {/* <mesh position-y={  0 } rotation-x={ - Math.PI * 0.5 } scale={ 40 }>
             <planeGeometry />

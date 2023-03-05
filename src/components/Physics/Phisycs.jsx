@@ -5,7 +5,7 @@ function Physics(props) {
   return (
     <>
         <OrbitControls />
-        <Text position={[0, 3, -2]} fontSize={1} color="salmon">Physics</Text>
+        <Text position={[0, 3, -2]} fontSize={1} color="white">Physics</Text>
 
         <group 
           position={[-3, 3, -2]}
@@ -28,7 +28,7 @@ function Physics(props) {
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>
                 <boxGeometry />
-                <meshStandardMaterial color="#4E6E81" />
+                <meshStandardMaterial color="#BDCDD6" />
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Telescope</Text>
         </group>
@@ -38,7 +38,7 @@ function Physics(props) {
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>
                 <boxGeometry />
-                <meshStandardMaterial color="#4E6E81" />
+                <meshStandardMaterial color="#BDCDD6" />
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Magnetic Field</Text>
         </group>

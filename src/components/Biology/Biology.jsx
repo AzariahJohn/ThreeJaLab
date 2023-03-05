@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { OrbitControls, Text } from '@react-three/drei'
+import HumanBrain from './HumanBrain'
 
 function Biology(props) {
+
+  const [brain, setBrain] = useState(false)
+  const [covid, setCovid] = useState(false)
+  const [currPage, setCurrPage] = useState(true)
+
   return (
     <>
         <OrbitControls />
-        <Text position={[0, 3, -2]} fontSize={1} color="salmon">Biology</Text>
+        {currPage && <>
+        <Text position={[0, 3, -2]} fontSize={1} color="white">Biology</Text>
 
         <group 
           position={[-3, 3, -2]}
@@ -25,10 +32,14 @@ function Biology(props) {
 
         <group 
             position={[-1.5,-1,0]}
+            onClick={(e) => {
+              setBrain(true)
+              setCurrPage(false)
+          }}
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>
                 <boxGeometry />
-                <meshStandardMaterial color="#4E6E81" />
+                <meshStandardMaterial color="#BDCDD6" />
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Human Brain</Text>
         </group>
@@ -38,10 +49,14 @@ function Biology(props) {
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>
                 <boxGeometry />
-                <meshStandardMaterial color="#4E6E81" />
+                <meshStandardMaterial color="#BDCDD6" />
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Covid Virus</Text>
         </group>
+        </>}
+
+        {brain && <HumanBrain setCurrPage={setCurrPage} setbrain={setBrain}/>}
+
     </>
   )
 }

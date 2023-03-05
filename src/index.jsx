@@ -21,16 +21,9 @@ root.render(
             } }
             className="canvas"
         >
-            {/* <directionalLight position={ [ 0, 2, 0 ] } intensity={ 1 } />
-            <ambientLight intensity={ 0.05 } />
-            <OrbitControls /> */}
             <XR>
                 <Controllers />
                 <Experience />
-                {/* <mesh>
-                    <boxGeometry />
-                    <meshBasicMaterial color={'grey'}/>
-                </mesh> */}
                 <Hands />
             </XR>
         </Canvas>

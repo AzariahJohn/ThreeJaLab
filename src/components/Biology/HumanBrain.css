@@ -1,0 +1,28 @@
+.one{
+    display: flex;
+    width: 200px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.txt-btn{
+    border: none;
+    border-radius: 50px;
+    background-color: lightgray;
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    background-color: rgba(128, 128, 128, 0.559);
+    padding: 5px;
+    border-radius: 3px;
+    color: lightgray;
+}
