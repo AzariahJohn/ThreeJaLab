@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.querySelector('#root'))
 root.render(
 
     <>
-        <VRButton />
+        <VRButton/>
         <Canvas
             camera={ {
                 fov: 45,
@@ -24,7 +24,6 @@ root.render(
             <XR>
                 <Controllers />
                 <Experience />
-                <Hands />
             </XR>
         </Canvas>
     </>

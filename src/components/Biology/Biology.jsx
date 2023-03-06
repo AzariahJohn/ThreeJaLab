@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { OrbitControls, Text } from '@react-three/drei'
 import HumanBrain from './HumanBrain'
+import Covid from './Covid'
 
 function Biology(props) {
 
@@ -34,6 +35,7 @@ function Biology(props) {
             position={[-1.5,-1,0]}
             onClick={(e) => {
               setBrain(true)
+              setCovid(false)
               setCurrPage(false)
           }}
         >
@@ -46,6 +48,11 @@ function Biology(props) {
 
         <group 
             position={[1.5,-1,0]}
+            onClick={(e) => {
+              setBrain(false)
+              setCovid(true)
+              setCurrPage(false)
+          }}
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>
                 <boxGeometry />
@@ -56,6 +63,7 @@ function Biology(props) {
         </>}
 
         {brain && <HumanBrain setCurrPage={setCurrPage} setbrain={setBrain}/>}
+        {covid && <Covid />}
 
     </>
   )
