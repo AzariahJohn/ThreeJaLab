@@ -24,6 +24,7 @@ root.render(
             <XR>
                 <Controllers />
                 <Experience />
+
             </XR>
         </Canvas>
     </>

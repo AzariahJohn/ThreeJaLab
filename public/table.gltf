@@ -1,0 +1,115 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.4.50",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_draco_mesh_compression"
+    ],
+    "extensionsRequired" : [
+        "KHR_draco_mesh_compression"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cube"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "wood",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.16264186799526215,
+                    0.05496758595108986,
+                    0,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2
+                    },
+                    "extensions" : {
+                        "KHR_draco_mesh_compression" : {
+                            "bufferView" : 0,
+                            "attributes" : {
+                                "POSITION" : 0,
+                                "TEXCOORD_0" : 1,
+                                "NORMAL" : 2
+                            }
+                        }
+                    },
+                    "indices" : 3,
+                    "material" : 0,
+                    "mode" : 4
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "count" : 108,
+            "max" : [
+                4.876568794250488,
+                2.247105598449707,
+                1.9765042066574097
+            ],
+            "min" : [
+                -4.885295867919922,
+                0.004354582168161869,
+                -1.9722472429275513
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 108,
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 108,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5123,
+            "count" : 162,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 848,
+            "byteOffset" : 0
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 848,
+            "uri" : "data:application/octet-stream;base64,RFJBQ08CAgEBAAAAbDYCNgAAFd/3fd/3fd/3fd/3fd/3fd/3fd/3Af8C10H/AtdB/wLXQQP/AAAAAAABAAABAAkDAAACAQMJAgABAgEBCQMAAgMBAQEADwNxDMkBCzEByQGYAx0H7QUDdRy9BCOM+LyKPVfgQ2XwVl3T2N0wdP+GlMv0q5OPqVMum6Ao2FyvgDmAHSAESwAQjTYAQJcGAJIAmRptNBBN/QAAwJYGAEgD+dAPIAFw6eMBALY0AEAC2NLHw4BwaTgAALY0AAAA2NIAAIM9wF4DffCAgw+MltPIwB3QbYE8EAOAJwZgB7oXiKYWAwCgSwMAAIAQPTcAgIimGwCgSwMALJAuDQAYiJcGAACgSwMAAIAubT0AgJeuHgCgSwMAJAFVWtr8A0S03QAAXRoA4AdkaruxQDQ1GAAAXRoAYIGEaDAgBLx09QAAXRoAQAh06eqhQLw0AAAAXRoAAAB0aQCg/A52L5AHYAh4UI2QaQ6QQABYT4E9CAOgFwYAXRoAKHAHdEsgD8QA8DwAO9CdQDS1GAAAXRoACAB86LkBAEA03QAAWxoAIAmkSwMABeKlAQAA6NIAAACgS1sPAOClqwcA6NIAAENIQAQDUBYAAJIFAAEkCwAAoCwYzwAkCwAESBaAAAAAMJ4FCAAAgPEMACgLxTMAyQKAAJIFQABlAQAgWQAAAAAAxbMAAAAYzwEAAAAA/z8AAFhUnMDisI47mXL8v5kwHEEOAQEBAQSAIF0a/////////////////////////////////////////+/5AjEBCRV9CZiY/////////////////////////////////////////+dMTDEBOnRdsEBrna34EJ+ruSlFo7Lrsfg/abSE3HguGc32ZYJGYw7dkCrbDNRX6D0dEk+18KdfsUZMApLnOG8AAAAA/w8AAAAAAD4AAAAAAACAPwwAAwEACwOZMBtVBRUKEET3k8C34Q1gHvUBtwC8vpELAggoeD8wHwAwYPMA7PfAQIMOAtMBAAAACPgPIMD9P/AkAID0HwIfAgCAfw9A7wIQfQtAgw4C0wEAAAAI+A8gAACAwH8AAIAAAP7/BwD4D/z/DwD/AwAA/wEAAAo="
+        }
+    ]
+}
