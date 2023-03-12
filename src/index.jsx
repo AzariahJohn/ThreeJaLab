@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import Experience from './Experience.jsx'
 import { VRButton, XR, Controllers, Hands } from '@react-three/xr'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
-
+import { Interactive } from '@react-three/xr'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 

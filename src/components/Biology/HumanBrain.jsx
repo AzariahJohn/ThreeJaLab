@@ -32,6 +32,9 @@ function HumanBrain(props) {
     return (
     <>
         <OrbitControls />
+        <Interactive onSelect={(e) => {
+                setRotate(!rotate)
+            }}>
         <group 
             position={[0,-1,0]}
             onClick={(e) => {
@@ -197,6 +200,7 @@ function HumanBrain(props) {
 
             </primitive>
         </group>
+        </Interactive>
 
         {six && <group position={[2, 0, 0]} rotation={[0, -Math.PI * 0.25, 0]}>
             

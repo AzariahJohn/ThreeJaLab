@@ -82,6 +82,15 @@ export default function Model(props) {
         geometry={nodes.E_Protein.geometry}
         material={materials.Protein}
         rotation={[Math.PI / 2, 0, 0]}>
+      <Interactive onSelect={() => {
+          setRna(false)
+          setEpro(true)
+          setEvLeft(false)
+          setEvRight(false)
+          setHema(false)
+          setSpike(false)
+          setMpro(false)
+        }}>
       <Text 
         position={[0.2, 1.1, -0.5]} 
         rotation={[-Math.PI * 0.5, 0, 0]} 
@@ -98,6 +107,7 @@ export default function Model(props) {
         }}
         >E Protein
       </Text>
+      </Interactive>
       </mesh>}
       {evRight && <mesh
         castShadow
