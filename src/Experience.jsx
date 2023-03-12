@@ -8,6 +8,7 @@ import * as THREE from 'three'
 import Physics from './components/Physics/Phisycs'
 import Chemistry from './components/Chemistry/Chemistry'
 import Biology from './components/Biology/Biology'
+import { Interactive } from '@react-three/xr'
 
 const IntroPage = (props) => {
     return <>
@@ -17,6 +18,13 @@ const IntroPage = (props) => {
             color="white"
         >Virtual Laboratory</Text>
 
+    <Interactive 
+        onClick={(e) => {
+            props.setPhysics(true)
+            props.setChemistry(false)
+            props.setBiology(false)
+            props.setIntroPage(false)
+        }}>
         <group 
             position={[2.5,-1,0]}
             onClick={(e) => {
@@ -32,6 +40,7 @@ const IntroPage = (props) => {
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Physics</Text>
         </group>
+    </Interactive>
 
         <group 
             position={[0,-1,0]}
@@ -48,7 +57,7 @@ const IntroPage = (props) => {
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Chemistry</Text>
         </group>
-
+        
         <group 
             position={[-2.5,-1,0]}
             onClick={(e) => {
@@ -77,23 +86,10 @@ export default function Experience()
     const [introPage, setIntroPage] = useState(true)
 
     return <>
-        {/* <Perf position="top-left" /> */}
         <OrbitControls makeDefault />
 
         <directionalLight position={ [ 0, 40, 10 ] } intensity={ 1 } />
         <ambientLight intensity={ 1 } />
-
-        {/* <mesh position-y={  0 } rotation-x={ - Math.PI * 0.5 } scale={ 40 }>
-            <planeGeometry />
-            <meshStandardMaterial color="#5D737E" />
-        </mesh>
-
-        <Text position={[ 0, 2, -1.3 ]} scale={0.5}>Biology</Text>
-
-        <mesh position={[0,2,-2]} scale={[3, 1, 1]}>
-            <boxGeometry/>
-            <meshNormalMaterial />
-        </mesh> */}
 
         {introPage && <IntroPage setPhysics={setPhysics} setBiology={setBiology} setChemistry={setChemistry}
         setIntroPage={setIntroPage}/>}

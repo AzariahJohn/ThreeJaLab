@@ -20,11 +20,11 @@ root.render(
                 position: [ 0, 1.6, 10 ],
             } }
             className="canvas"
+            fog="true"
         >
             <XR>
                 <Controllers />
                 <Experience />
-
             </XR>
         </Canvas>
     </>
