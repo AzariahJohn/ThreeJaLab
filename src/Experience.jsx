@@ -19,7 +19,7 @@ const IntroPage = (props) => {
         >Virtual Laboratory</Text>
 
     <Interactive 
-        onClick={(e) => {
+        onSelect={(e) => {
             props.setPhysics(true)
             props.setChemistry(false)
             props.setBiology(false)
@@ -41,7 +41,12 @@ const IntroPage = (props) => {
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Physics</Text>
         </group>
     </Interactive>
-
+        <Interactive onSelect={(e) => {
+                props.setPhysics(false)
+                props.setChemistry(true)
+                props.setBiology(false)
+                props.setIntroPage(false)
+            }}>
         <group 
             position={[0,-1,0]}
             onClick={(e) => {
@@ -57,7 +62,13 @@ const IntroPage = (props) => {
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Chemistry</Text>
         </group>
-        
+        </Interactive>
+        <Interactive onSelect={(e) => {
+                props.setPhysics(false)
+                props.setChemistry(false)
+                props.setBiology(true)
+                props.setIntroPage(false)
+            }}>
         <group 
             position={[-2.5,-1,0]}
             onClick={(e) => {
@@ -73,7 +84,7 @@ const IntroPage = (props) => {
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Biology</Text>
         </group>
-
+        </Interactive>
     </>
 }
 
