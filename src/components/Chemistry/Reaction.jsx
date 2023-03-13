@@ -19,9 +19,9 @@ function Reaction(props) {
   const [rxnTwo, setRxnTwo] = useState(false)
   const [rxnThree, setRxnThree] = useState(false)
 
-  const [oneColor, setOneColor] = useState("yellow")
-  const [twoColor, setTwoColor] = useState("orange")
-  const [threeColor, setThreeColor] = useState("grey")
+  const [oneColor, setOneColor] = useState("#828181")
+  const [twoColor, setTwoColor] = useState("#828181")
+  const [threeColor, setThreeColor] = useState("#828181")
 
   // Brown, Purple, Maroon.
 
@@ -35,7 +35,7 @@ function Reaction(props) {
                 <RigidBody type="fixed" colliders="trimesh">
                     <Interactive onSelect={() => {
                             setOne("dynamic")
-                            setOneColor("brown")
+                            setOneColor("#e37a4d")
                         }}>
                     <mesh
                         castShadow
@@ -45,7 +45,9 @@ function Reaction(props) {
                         position={[-1.38, 1.02, -1.42]}
                         onClick={() => {
                             setOne("dynamic")
-                            setOneColor("brown")
+                            setTimeout(() => {
+                                setOneColor("#e37a4d")
+                            }, 2000)
                         }}
                     />
                     </Interactive>
@@ -86,7 +88,9 @@ function Reaction(props) {
                         position={[-1.38, 1.02, -1.42]}
                         onClick={() => {
                             setTwo("dynamic")
-                            setTwoColor("red")
+                            setTimeout(() => {
+                                setTwoColor("#ad9f66")
+                            }, 2000)
                         }}
                     />
                 </RigidBody>
@@ -125,7 +129,10 @@ function Reaction(props) {
                         position={[-1.38, 1.02, -1.42]}
                         onClick={() => {
                             setThree(true)
-                            setThreeColor("maroon")
+                            setTimeout(() => {
+                                setThreeColor("#7a5848")
+                            }, 2000)
+                            
                         }}
                     />
                 </RigidBody>
