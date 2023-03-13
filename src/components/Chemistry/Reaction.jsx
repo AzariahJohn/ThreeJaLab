@@ -176,9 +176,11 @@ function Reaction(props) {
                         <mesh scale={0.5} position={[-2.85, 3.5, -4]}>
                             <boxGeometry />
                             <meshBasicMaterial color="white"/>
-                            <Text position={[0, 0, 0.57]} fontSize={0.5} color="black">Na</Text>
+                            <Text position={[0, 0, 0.57]} fontSize={0.5} color="black">Mg</Text>
                         </mesh>  
                 </RigidBody>}
+
+                {/* Mg + h2so4 -> Mgso4 + h2 */}
             
             <RigidBody type="fixed">
                 <primitive object={table.scene} position={[0, -3, -4]}></primitive>
@@ -210,8 +212,8 @@ function Reaction(props) {
                     <sphereGeometry />
                     <meshBasicMaterial color="yellow"/>
                     <group scale={0.5} position={[-0.65, -0.15, 0.5]}>
-                        <Text color="black" position={[0, 0, 1]}>H</Text>
-                        <Text color="black" scale={0.5} position={[0.5, -0.08, 1]}>2</Text>
+                        <Text color="black" position={[0, 0, 1]}>N</Text>
+                        <Text color="black" scale={0.5} position={[0.5, -0.08, 1]}>a</Text>
                         <Text color="black" position={[1.5, 0, 1]}>SO</Text>
                         <Text color="black" scale={0.5} position={[2.3, -0.08, 1]}>4</Text>
                     </group>
@@ -234,7 +236,7 @@ function Reaction(props) {
                 <mesh>
                     <sphereGeometry />
                     <meshBasicMaterial color="blue"/>
-                    <Text position={[0.15, -0.2, 1]}>Na</Text>
+                    <Text position={[0.15, -0.2, 1]}>Zn</Text>
                     <Text position={[2.5, 0, 0]}>+</Text>
                 </mesh>
 
@@ -242,10 +244,8 @@ function Reaction(props) {
                     <sphereGeometry />
                     <meshBasicMaterial color="green"/>
                     <group position={[-0.5, -0.2, 0.5]} scale={0.5}>
-                        <Text position={[0, 0, 1]}>H</Text>
-                        <Text scale={0.5} position={[0.5, -0.08, 1]}>2</Text>
-                        <Text position={[1.5, 0, 1]}>SO</Text>
-                        <Text scale={0.5} position={[2.3, -0.08, 1]}>4</Text>
+                        <Text position={[0, 0, 1]}>2</Text>
+                        <Text position={[1.5, 0, 1]}>HCL</Text>
                     </group>
                     <Text scale={0.5} position={[2.5, 0, 0]}>Gives</Text>
                 </mesh> 
@@ -254,10 +254,9 @@ function Reaction(props) {
                     <sphereGeometry />
                     <meshBasicMaterial color="yellow"/>
                     <group scale={0.5} position={[-0.65, -0.15, 0.5]}>
-                        <Text color="black" position={[0, 0, 1]}>H</Text>
-                        <Text color="black" scale={0.5} position={[0.5, -0.08, 1]}>2</Text>
-                        <Text color="black" position={[1.5, 0, 1]}>SO</Text>
-                        <Text color="black" scale={0.5} position={[2.3, -0.08, 1]}>4</Text>
+                        <Text color="black" position={[0.4, 0, 1]}>Zn</Text>
+                        <Text color="black" position={[1.5, 0, 1]}>Cl</Text>
+                        <Text color="black" scale={0.5} position={[2.3, -0.08, 1]}>2</Text>
                     </group>
                     <Text position={[2.5, 0, 0]}>+</Text>
                 </mesh>
@@ -278,7 +277,7 @@ function Reaction(props) {
                 <mesh>
                     <sphereGeometry />
                     <meshBasicMaterial color="blue"/>
-                    <Text position={[0.15, -0.2, 1]}>Na</Text>
+                    <Text position={[0.15, -0.2, 1]}>Mg</Text>
                     <Text position={[2.5, 0, 0]}>+</Text>
                 </mesh>
 
@@ -298,8 +297,8 @@ function Reaction(props) {
                     <sphereGeometry />
                     <meshBasicMaterial color="yellow"/>
                     <group scale={0.5} position={[-0.65, -0.15, 0.5]}>
-                        <Text color="black" position={[0, 0, 1]}>H</Text>
-                        <Text color="black" scale={0.5} position={[0.5, -0.08, 1]}>2</Text>
+                        <Text color="black" position={[0, 0, 1]}>M</Text>
+                        <Text color="black" scale={0.5} position={[0.6, -0.08, 1]}>g</Text>
                         <Text color="black" position={[1.5, 0, 1]}>SO</Text>
                         <Text color="black" scale={0.5} position={[2.3, -0.08, 1]}>4</Text>
                     </group>
