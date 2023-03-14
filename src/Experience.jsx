@@ -9,13 +9,15 @@ import Physics from './components/Physics/Phisycs'
 import Chemistry from './components/Chemistry/Chemistry'
 import Biology from './components/Biology/Biology'
 import { Interactive } from '@react-three/xr'
+import Lab from './components/Environment/Lab'
 
 const IntroPage = (props) => {
     return <>
+    <group scale={0.2} position={[-1.45, 1.5, -2.8]}>
         <Text 
             position={[0, 3, -2]} 
             fontSize={ 1 }
-            color="white"
+            color="black"
         >Virtual Laboratory</Text>
 
     <Interactive 
@@ -85,6 +87,7 @@ const IntroPage = (props) => {
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Biology</Text>
         </group>
         </Interactive>
+        </group>
     </>
 }
 
@@ -97,7 +100,6 @@ export default function Experience()
     const [introPage, setIntroPage] = useState(true)
 
     return <>
-        <OrbitControls makeDefault />
 
         <directionalLight position={ [ 0, 40, 10 ] } intensity={ 1 } />
         <ambientLight intensity={ 1 } />

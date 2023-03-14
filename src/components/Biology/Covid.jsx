@@ -44,7 +44,7 @@ export default function Model(props) {
 
   return (
     <>
-    <group {...props} dispose={null} position={[ 0, 2, -1.7 ]} scale={0.75} ref={virusRef} onClick={(e) => {setRotate(!rotate)}}>
+    <group {...props} dispose={null} position={[2, 2, -4]} scale={0.75} ref={virusRef} onClick={(e) => {setRotate(!rotate)}}>
       {rna && <mesh
         castShadow
         receiveShadow
@@ -145,7 +145,7 @@ export default function Model(props) {
         rotation={[Math.PI / 2, 0, 0]}
       ><Text position={[0.25, 1.0, 0.4]} rotation={[-Math.PI * 0.5, 0, 0]} fontSize={ 0.15 } color={"black"}>Envelope</Text></mesh>}
     </group>
-    {menu && <group position={[4, 0, -5]} rotation={[0, -Math.PI * 0.4, 0]}>
+    {menu && <group position={[5.8, 2, -3]} scale={0.3} rotation={[0, -Math.PI * 0.5, 0]}>
             
             <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                 <planeGeometry />
@@ -350,7 +350,7 @@ export default function Model(props) {
             {/* <Text position={[0.9, 3.3, 0.01]} rotation={[0, 0, -Math.PI * 0.25]} fontSize={0.5} onClick={() => {
                 console.log("exit")
             }}>+</Text> */}
-            {rnai && <group position={[4, 0, -5]} rotation={[0, -Math.PI * 0.4, 0]}>
+            {rnai && <group position={[5.8, 2, -3]} scale={0.3} rotation={[0, -Math.PI * 0.5, 0]}>
             
             <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                 <planeGeometry />
@@ -393,7 +393,7 @@ export default function Model(props) {
               }}>+</Text>
             </Interactive>
         </group>}
-        {eproi && <group position={[4, 0, -5]} rotation={[0, -Math.PI * 0.4, 0]}>
+        {eproi && <group position={[5.8, 2, -3]} scale={0.3} rotation={[0, -Math.PI * 0.5, 0]}>
             
             <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                 <planeGeometry />
@@ -436,7 +436,7 @@ export default function Model(props) {
               }}>+</Text>
             </Interactive>
         </group>}
-        {evRighti && <group position={[4, 0, -5]} rotation={[0, -Math.PI * 0.4, 0]}>
+        {evRighti && <group position={[5.8, 2, -3]} scale={0.3} rotation={[0, -Math.PI * 0.5, 0]}>
             
             <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                 <planeGeometry />
@@ -479,7 +479,7 @@ export default function Model(props) {
             }}>+</Text>
             </Interactive>
         </group>}
-        {spikei && <group position={[4, 0, -5]} rotation={[0, -Math.PI * 0.4, 0]}>
+        {spikei && <group position={[5.8, 2, -3]} scale={0.3} rotation={[0, -Math.PI * 0.5, 0]}>
             
             <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                 <planeGeometry />
@@ -522,7 +522,7 @@ export default function Model(props) {
               }}>+</Text>
             </Interactive>
         </group>}
-        {mproi && <group position={[4, 0, -5]} rotation={[0, -Math.PI * 0.4, 0]}>
+        {mproi && <group position={[5.8, 2, -3]} scale={0.3} rotation={[0, -Math.PI * 0.5, 0]}>
             
             <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                 <planeGeometry />
@@ -565,7 +565,7 @@ export default function Model(props) {
               }}>+</Text>
             </Interactive>
         </group>}
-        {hemai && <group position={[4, 0, -5]} rotation={[0, -Math.PI * 0.4, 0]}>
+        {hemai && <group position={[5.8, 2, -3]} scale={0.3} rotation={[0, -Math.PI * 0.5, 0]}>
             
             <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                 <planeGeometry />

@@ -12,9 +12,8 @@ function Biology(props) {
 
   return (
     <>
-        <OrbitControls />
-        {currPage && <>
-        <Text position={[0, 3, -2]} fontSize={1} color="white">Biology</Text>
+        {currPage && <group scale={0.3} position={[0, 0, 0]}>
+        <Text position={[0, 3, -2]} fontSize={1} color="black">Biology</Text>
         <Interactive 
           onSelect={(e) => {
               props.setPhysics(false)
@@ -81,7 +80,7 @@ function Biology(props) {
               <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Covid Virus</Text>
           </group>
         </Interactive>
-        </>}
+        </group>}
 
         {brain && <HumanBrain setCurrPage={setCurrPage} setbrain={setBrain}/>}
         {covid && <Covid />}

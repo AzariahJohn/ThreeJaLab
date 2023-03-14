@@ -12,8 +12,7 @@ function Chemistry(props) {
 
   return (
     <>
-      {curr && <group>
-        <OrbitControls />
+      {curr && <group scale={0.3} position={[0, 1.5, 0]}>
         <Text position={[0, 3, -2]} fontSize={1} color="white">Chemistry</Text>
 
         <Interactive onSelect={(e) => {

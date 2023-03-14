@@ -5,6 +5,7 @@ import Experience from './Experience.jsx'
 import { VRButton, XR, Controllers, Hands } from '@react-three/xr'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { Interactive } from '@react-three/xr'
+import Lab from './components/Environment/Lab'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -25,6 +26,7 @@ root.render(
             <XR>
                 <Controllers />
                 <Experience />
+                <Lab />
             </XR>
         </Canvas>
     </>

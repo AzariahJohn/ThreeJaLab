@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { OrbitControls, Text } from '@react-three/drei'
+import Telescope from './Telescope'
 
 function Physics(props) {
+
+  const [telescope, setTelescope] = useState(false)
+  const [current, setCurrent] = useState(true)
+
   return (
     <>
-        <OrbitControls />
-        <Text position={[0, 3, -2]} fontSize={1} color="white">Physics</Text>
+
+        {current && <group scale={0.3} position={[0.7, 2, -4]}>
+        <Text position={[0, 3, -2]} fontSize={1} color="black">Physics</Text>
 
         <group 
           position={[-3, 3, -2]}
@@ -24,7 +30,11 @@ function Physics(props) {
         </group>
 
         <group 
-            position={[-1.5,-1,0]}
+            position={[0,-1,0]}
+            onClick={() => {
+              setTelescope(true)
+              setCurrent(false)
+            }}
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>
                 <boxGeometry />
@@ -33,7 +43,7 @@ function Physics(props) {
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Telescope</Text>
         </group>
 
-        <group 
+        {/* <group 
             position={[1.5,-1,0]}
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>
@@ -41,7 +51,10 @@ function Physics(props) {
                 <meshStandardMaterial color="#BDCDD6" />
             </mesh>
             <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Magnetic Field</Text>
-        </group>
+        </group> */}
+        </group>}
+
+        {telescope && <Telescope setIntroPage={props.setIntroPage}/>}
 
     </>
   )

@@ -9,7 +9,7 @@ import { Interactive } from '@react-three/xr'
 function Reaction(props) {
 
   const { nodes, materials } = useGLTF("/beaker.gltf");
-  const table = useGLTF("./table.gltf")
+//   const table = useGLTF("./table.gltf")
 
   const [one, setOne] = useState(false)
   const [two, setTwo] = useState(false)
@@ -31,7 +31,8 @@ function Reaction(props) {
 
             {/* <Debug /> */}
             
-            <group {...props} dispose={null} position={[-1.5, -0.77, -2.6]}>
+        <group position={[-1, 1.8, 0]}>
+            <group {...props} scale={0.2} dispose={null} position={[2.8, -0.77, -2.6]}>
                 <RigidBody type="fixed" colliders="trimesh">
                     <Interactive onSelect={() => {
                             setOne("dynamic")
@@ -78,7 +79,7 @@ function Reaction(props) {
 
             </group>
 
-            <group {...props} dispose={null} position={[ 1.3, -0.77, -2.6]}>
+            <group {...props} scale={0.2} dispose={null} position={[ 3.4, -0.77, -2.6]}>
                 <RigidBody type="fixed" colliders="trimesh">
                     <mesh
                         castShadow
@@ -119,7 +120,7 @@ function Reaction(props) {
 
             </group>
 
-            <group {...props} dispose={null} position={[ 4, -0.77, -2.6]}>
+            <group {...props} scale={0.2} dispose={null} position={[ 4, -0.77, -2.6]}>
                 <RigidBody type="fixed" colliders="trimesh">
                     <mesh
                         castShadow
@@ -162,9 +163,10 @@ function Reaction(props) {
                     <Text fontSize={0.5} color="black" position={[0, 0, 0.55]}>Reaction</Text>
                 </mesh>
             </group>
-            
+            </group>
+            <group position={[-1.45, 0, -0.4]}>
                 {three && <RigidBody >
-                        <mesh scale={0.5} position={[2.6, 3.5, -4]}>
+                        <mesh scale={0.08} position={[ 4, 2, -2.6]}>
                             <boxGeometry />
                             <meshBasicMaterial color="white"/>
                             <Text position={[0, 0, 0.57]} fontSize={0.5} color="black">Na</Text>
@@ -172,7 +174,7 @@ function Reaction(props) {
                 </RigidBody>}
 
                 {two && <RigidBody >
-                        <mesh scale={0.5} position={[-0.1, 3.5, -4]}>
+                        <mesh scale={0.08} position={[ 3.4, 2, -2.6]}>
                             <boxGeometry />
                             <meshBasicMaterial color="white"/>
                             <Text position={[0, 0, 0.57]} fontSize={0.5} color="black">Zn</Text>
@@ -180,18 +182,18 @@ function Reaction(props) {
                 </RigidBody>}
 
                 {one && <RigidBody >
-                        <mesh scale={0.5} position={[-2.85, 3.5, -4]}>
+                        <mesh scale={0.08} position={[2.8, 2, -2.6]}>
                             <boxGeometry />
                             <meshBasicMaterial color="white"/>
                             <Text position={[0, 0, 0.57]} fontSize={0.5} color="black">Mg</Text>
                         </mesh>  
                 </RigidBody>}
-
+            </group>
                 {/* Mg + h2so4 -> Mgso4 + h2 */}
             
-            <RigidBody type="fixed">
+            {/* <RigidBody type="fixed">
                 <primitive object={table.scene} position={[0, -3, -4]}></primitive>
-            </RigidBody>
+            </RigidBody> */}
 
             {/* Reaction One */}
 
