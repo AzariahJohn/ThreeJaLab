@@ -48,7 +48,7 @@ function HumanBrain(props) {
                 {/* <Text scale={0.2} position={[ 0, 2, -1.7 ]} color="#2E3840">Reactions</Text> */}
                 <ambientLight intensity={ 0.5 } />
 
-                <primitive object={model.scene} position={[2, 2, -4]} scale={2} ref={ cubeRef }>
+                <primitive object={model.scene} position={[0.5, 2, -3]} scale={2} ref={ cubeRef }>
                     <Interactive onSelect={(e) => {
                                 setOne(true)
                                 setTwo(false)
@@ -69,6 +69,7 @@ function HumanBrain(props) {
                             position={[0, -0.05, -0.4]}
                             rotation={[0, Math.PI, 0]}
                             fontSize={0.05}
+                            color="black"
                         >
                             Cerebellum
                         </Text>
@@ -206,7 +207,7 @@ function HumanBrain(props) {
             </group>
             </Interactive>
 
-            {six && <group position={[5.88, 1.6, -3]} scale={0.5} rotation={[0, -Math.PI * 0.5, 0]}>
+            {six && <group position={[3.5, 1.5, -1.3]} scale={0.4} rotation={[0, -Math.PI * 0.5, 0]}>
                 
                 <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                     <planeGeometry />
@@ -244,7 +245,7 @@ function HumanBrain(props) {
                 </Interactive>
             </group>}
 
-            {five && <group position={[5.88, 1.6, -3]} scale={0.5} rotation={[0, -Math.PI * 0.5, 0]}>
+            {five && <group position={[3.5, 1.5, -1.3]} scale={0.4} rotation={[0, -Math.PI * 0.5, 0]}>
                 
                 <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                     <planeGeometry />
@@ -282,7 +283,7 @@ function HumanBrain(props) {
                 </Interactive>
             </group>}
 
-            {four && <group position={[5.88, 1.6, -3]} scale={0.5} rotation={[0, -Math.PI * 0.5, 0]}>
+            {four && <group position={[3.5, 1.5, -1.3]} scale={0.4} rotation={[0, -Math.PI * 0.5, 0]}>
                 
                 <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                     <planeGeometry />
@@ -320,7 +321,7 @@ function HumanBrain(props) {
                 </Interactive>
             </group>}
 
-            {three && <group position={[5.88, 1.6, -3]} scale={0.5} rotation={[0, -Math.PI * 0.5, 0]}>
+            {three && <group position={[3.5, 1.5, -1.3]} scale={0.4} rotation={[0, -Math.PI * 0.5, 0]}>
                 
                 <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                     <planeGeometry />
@@ -358,7 +359,7 @@ function HumanBrain(props) {
                 </Interactive>
             </group>}
 
-            {two && <group position={[5.88, 1.6, -3]} scale={0.5} rotation={[0, -Math.PI * 0.5, 0]}>
+            {two && <group position={[3.5, 1.5, -1.3]} scale={0.4} rotation={[0, -Math.PI * 0.5, 0]}>
                 
                 <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                     <planeGeometry />
@@ -396,7 +397,7 @@ function HumanBrain(props) {
                 </Interactive>
             </group>}
 
-            {one && <group position={[5.88, 1.6, -3]} scale={0.5} rotation={[0, -Math.PI * 0.5, 0]}>
+            {one && <group position={[3.5, 1.5, -1.3]} scale={0.4} rotation={[0, -Math.PI * 0.5, 0]}>
                 
                 <mesh position={[3, 1.2, 0]}  scale={[5, 5, 1]}>
                     <planeGeometry />

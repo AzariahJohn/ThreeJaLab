@@ -10,7 +10,7 @@ function Physics(props) {
   return (
     <>
 
-        {current && <group scale={0.3} position={[0.7, 2, -4]}>
+        {current && <group scale={0.3} position={[-1.45, 1.5, -2.7]}>
         <Text position={[0, 3, -2]} fontSize={1} color="black">Physics</Text>
 
         <group 
@@ -34,6 +34,7 @@ function Physics(props) {
             onClick={() => {
               setTelescope(true)
               setCurrent(false)
+              window.location.href = 'https://loquacious-fudge-258c92.netlify.app/'
             }}
         >
             <mesh position={[0,2,-2]} scale={[2, 1, 0.5]}>

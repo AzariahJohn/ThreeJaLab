@@ -13,7 +13,7 @@ import Lab from './components/Environment/Lab'
 
 const IntroPage = (props) => {
     return <>
-    <group scale={0.2} position={[-1.45, 1.5, -2.8]}>
+    <group scale={0.3} position={[-1.45, 1.5, -2.7]}>
         <Text 
             position={[0, 3, -2]} 
             fontSize={ 1 }

@@ -12,7 +12,7 @@ function Biology(props) {
 
   return (
     <>
-        {currPage && <group scale={0.3} position={[0, 0, 0]}>
+        {currPage && <group scale={0.3} position={[-1.45, 1.5, -2.7]}>
         <Text position={[0, 3, -2]} fontSize={1} color="black">Biology</Text>
         <Interactive 
           onSelect={(e) => {

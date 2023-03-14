@@ -25,6 +25,10 @@ root.render(
         >
             <XR>
                 <Controllers />
+                <Hands 
+                    modelLeft="./crosshair.glb"
+                    modelRight="./crosshair.glb"
+                />
                 <Experience />
                 <Lab />
             </XR>
