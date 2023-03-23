@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Text, useGLTF, PivotControls } from "@react-three/drei";
 import { Debug, Physics, RigidBody } from "@react-three/rapier";
+import Lab from "../Environment/Lab";
 
 function PhPaper(props) {
 
@@ -13,11 +14,12 @@ function PhPaper(props) {
 
   return (
     <>
+        <Lab />
         <Physics>
 
             {/* <Debug /> */}
-            
-            <group {...props} dispose={null} position={[-1.5, -0.77, -2.6]}>
+        <group position={[-2.8, 1.0, 1]}>
+            <group {...props} dispose={null} scale={0.2} position={[2.8, -0.77, -2.6]}>
                 <RigidBody type="fixed" colliders="trimesh">
                     <mesh
                         castShadow
@@ -47,7 +49,7 @@ function PhPaper(props) {
 
             </group>
 
-            <group {...props} dispose={null} position={[ 1.3, -0.77, -2.6]}>
+            <group {...props} dispose={null} position={[ 3.4, -0.77, -2.6]} scale={0.2} >
                 <RigidBody type="fixed" colliders="trimesh">
                     <mesh
                         castShadow
@@ -78,7 +80,7 @@ function PhPaper(props) {
 
             </group>
 
-            <group {...props} dispose={null} position={[ 4, -0.77, -2.6]}>
+            <group {...props} dispose={null} position={[ 4, -0.77, -2.6]} scale={0.2}>
                 <RigidBody type="fixed" colliders="trimesh">
                     <mesh
                         castShadow
@@ -108,6 +110,7 @@ function PhPaper(props) {
                     <Text fontSize={0.5} color="black" position={[0, 0, 0.55]}>Solution</Text>
                 </mesh>
             </group>
+        </group>
             
                 {three && <RigidBody >
                         <mesh scale={0.5} position={[2.6, 3.5, -4]}>

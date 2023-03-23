@@ -91,7 +91,7 @@ const IntroPage = (props) => {
     </>
 }
 
-export default function Experience()
+export default function Experience({student, teacher})
 {
 
     const [physics, setPhysics] = useState(false)
@@ -104,14 +104,16 @@ export default function Experience()
         <directionalLight position={ [ 0, 40, 10 ] } intensity={ 1 } />
         <ambientLight intensity={ 1 } />
 
+        <Lab />
+
         {introPage && <IntroPage setPhysics={setPhysics} setBiology={setBiology} setChemistry={setChemistry}
         setIntroPage={setIntroPage}/>}
 
-        {physics && <Physics setPhysics={setPhysics} setBiology={setBiology} setChemistry={setChemistry}
+        {physics && <Physics student={student} teacher={teacher} setPhysics={setPhysics} setBiology={setBiology} setChemistry={setChemistry}
         setIntroPage={setIntroPage}/>}
-        {chemistry && <Chemistry setPhysics={setPhysics} setBiology={setBiology} setChemistry={setChemistry}
+        {chemistry && <Chemistry student={student} teacher={teacher} setPhysics={setPhysics} setBiology={setBiology} setChemistry={setChemistry}
         setIntroPage={setIntroPage}/>}
-        {biology && <Biology setPhysics={setPhysics} setBiology={setBiology} setChemistry={setChemistry}
+        {biology && <Biology student={student} teacher={teacher} setPhysics={setPhysics} setBiology={setBiology} setChemistry={setChemistry}
         setIntroPage={setIntroPage}/>}
     </>
 }

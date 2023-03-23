@@ -3,6 +3,7 @@ import { OrbitControls, Text } from '@react-three/drei'
 import HumanBrain from './HumanBrain'
 import Covid from './Covid'
 import { Interactive } from '@react-three/xr'
+import Lab from '../Environment/Lab'
 
 function Biology(props) {
 
@@ -10,8 +11,12 @@ function Biology(props) {
   const [covid, setCovid] = useState(false)
   const [currPage, setCurrPage] = useState(true)
 
+  const student = props.student;
+  const teacher = props.teacher;  
+
   return (
     <>
+        <Lab />
         {currPage && <group scale={0.3} position={[-1.45, 1.5, -2.7]}>
         <Text position={[0, 3, -2]} fontSize={1} color="black">Biology</Text>
         <Interactive 

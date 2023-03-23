@@ -17,10 +17,10 @@ export default function Lab()
             rotateSpeed={0.5}
         />
 
-        <mesh position={[0, -1.5, 2]}>
+        {/* <mesh position={[0, -1.5, 2]}>
             <boxGeometry />
             <meshBasicMaterial color={"white"}/>
-        </mesh>
+        </mesh> */}
 
         <PerspectiveCamera makeDefault position={[3.7, 4.3, -1.5]}/>
 
