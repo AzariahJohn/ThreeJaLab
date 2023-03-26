@@ -3,7 +3,7 @@ import { Html, OrbitControls, Text, useGLTF } from '@react-three/drei'
 import { useFrame, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import './HumanBrain.css'
-import { Interactive, useXR } from '@react-three/xr'
+import { Controllers, Interactive, useXR } from '@react-three/xr'
 import Experience from '../../Experience'
 
 function HumanBrain(props) {
@@ -35,7 +35,7 @@ function HumanBrain(props) {
     return (
     <>
         {<group>
-
+            <Controllers />
             <Interactive onSelect={(e) => {
                     setRotate(!rotate)
                 }}>

@@ -32,6 +32,8 @@ function App() {
                 fog="true"
             >
                 <XR>
+                    <Controllers />
+                    <Hands />
                     <Routes>
                         <Route path="/" element={<HomePage setStudent={setStudent} setTeacher={setTeacher}/>}/>
                         <Route path='/experiment' element={<Experience student={student} teacher={teacher}/>}/>
